@@ -21,7 +21,7 @@
              
             </div>
           </div>
-          <button class="btn">Menu</button>
+          <router-link :to="{name:'Menu',params:{id : datas.title}}"> <button class="btn">Menu</button></router-link>
         </div>
       </div>
      </div>
