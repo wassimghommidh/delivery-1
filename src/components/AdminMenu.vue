@@ -25,14 +25,10 @@
     </div>
     <div style="text-align: center; margin-top: 30px">
       <hr class="main-hr" />
-      <button
-        class="icon-btn add-btn"
-        id="hello"
-        @click="addField(input, foodTypes)"
-      >
+      <button class="icon-btn add-btn" id="hello" @click="addField(foodTypes)">
         <div class="btn-txt">Add</div>
       </button>
-      <button class="icon-btn add-btn" @click="removeField(input, foodTypes)">
+      <button class="icon-btn add-btn" @click="removeField(foodTypes)">
         <div class="btn-txt">Remove</div>
       </button>
     </div>
@@ -50,13 +46,30 @@ export default {
     };
   },
   methods: {
-    addField(value, fieldType) {
-      fieldType.push({ value: "" });
-    },
-    removeField(index, fieldType) {
-      fieldType.splice(index, 1);
+    addField(fieldType) {
+      fieldType.push({ food: "", price: "" });
     },
 
+    removeField(fieldType) {
+      fieldType.splice(0, 1);
+    },
+
+    getMenuFood: function () {
+    //   console.log(this.foodTypes);
+this.foodTypes.map((item) => {
+    console.log(item)
+    // console.log(item.food,'hello')
+    //  console.log(item.price,'YES')
+  const foodMenuu = { food:item.food,price:item.price};
+   axios.post("/foodmenu", foodMenuu)
+     .then(response => console.log(response));
+
+
+})
+}
+
+
+    
   },
 };
 </script>
