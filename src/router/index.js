@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Login from "../components/Login.vue"
 import Cardrestaurant from "../components/Cardrestaurant.vue"
-import Menu from "../components/Menu.vue"
+import AdminMenu from "../components/AdminMenu.vue"
 const routes = [
   {
     path: '/',
@@ -15,8 +15,8 @@ const routes = [
     component: Cardrestaurant
   }, {
     path: '/menu/:id',
-    name: 'Menu',
-    component: Menu
+    name: 'AdminMenu',
+    component: AdminMenu
   }
 ]
 
