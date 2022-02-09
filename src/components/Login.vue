@@ -62,7 +62,7 @@
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
                 0 10px 10px rgba(0, 0, 0, .2);
-    background: linear-gradient(to bottom, #efefef, #ccc);
+    background: linear-gradient(to bottom, #efefef, rgb(1, 17, 26));
     .overlay-container {
       position: absolute;
       top: 0;
@@ -78,7 +78,7 @@
       left: -100%;
       height: 100%;
       width: 200%;
-      background: linear-gradient(to bottom right, #57919b, #009345);
+      background: linear-gradient(to bottom right, #57919b, #1ac3e0);
       color: #fff;
       transform: translateX(0);
       transition: transform .5s ease-in-out;
