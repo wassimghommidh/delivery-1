@@ -1,11 +1,25 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+    <AdminMenu />
   </div>
-  <router-view/>
+  <!-- <router-view/> -->
 </template>
+<script>
+import AdminMenu from "./components/AdminMenu.vue"
 
+// import {Cardrestaurant} from "./components/Cardrestaurant"
+
+export default {
+  name: "App",
+  components: {
+    AdminMenu,
+    
+    
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
