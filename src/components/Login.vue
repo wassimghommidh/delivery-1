@@ -6,12 +6,12 @@
           <div class="overlay-left">
             <h2>Welcome Back!</h2>
             <p>Please login with your personal info</p>
-            <button class="invert" id="signIn" @click="signUp = !signUp">Sign In</button>
+            <button class="invert" id="signIn" @click="signUp = !signUp">Log In</button>
         </div>
         <div class="overlay-right">
             <h2>Hello, Friend!</h2>
             <p>Please enter your personal details</p>
-            <button class="invert" id="signUp" @click="signUp = !signUp">Sign Up</button>
+            <button class="invert" id="signUp" @click="signUp = !signUp">Sign UP</button>
           </div>
         </div>
       </div>
@@ -21,15 +21,15 @@
         <input type="text" placeholder="Name" />
         <input type="password" placeholder="Password" />
           <input type="text" placeholder="Email" />
-        <button>Sign Up</button>
+        <router-link to="/menu"><button>Sign Up</button></router-link>
       </form>
       <form class="sign-in" action="#">
-        <h2>Sign In</h2>
+        <h2>Log In</h2>
         <div>Use your account</div>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <a href="#">Forgot your password?</a>
-        <button @click="linkToHome">Sign Up</button>
+        <router-link to="/menu"><button>Log in</button></router-link>
       </form>
     </div>
   </article>
@@ -38,16 +38,9 @@
 <script>
 
   export default {
-    component:{
-      Home : "Home"
-    },
     data: () => {
       return {
         signUp: false
-      }
-    },methods:{
-      linkToHome(){
-        this.$router.push('/home')
       }
     }
   }
