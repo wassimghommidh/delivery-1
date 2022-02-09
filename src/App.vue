@@ -29,8 +29,8 @@ export default {
 #app {
   font-family: Tahoma;
     font-size: 1.6rem;
-    color: #222;
-    background-color: #092525;
+    color: rgb(245, 239, 239);
+    background-color: #edf3f3;
     height: 100vh;
     display: flex;
     justify-content: center;
