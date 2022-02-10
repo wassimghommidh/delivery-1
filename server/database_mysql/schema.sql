@@ -22,10 +22,11 @@ CREATE TABLE restaurant (
   password varchar(64),
   picture  varchar(255),
   description varchar(255),
-    menu varchar(255),
+  menu varchar(255),
   
   PRIMARY KEY (ID)
 );
+
 /* excute schema  */
 /* mysql -u root -p <server/database_mysql/schema.sql */
 
