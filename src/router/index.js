@@ -1,8 +1,14 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Login from "../components/Login.vue"
 import Cardrestaurant from "../components/Cardrestaurant.vue"
 import AdminMenu from "../components/AdminMenu.vue"
+
+
+
+
+
 const routes = [
   {
     path: "/",
@@ -10,6 +16,7 @@ const routes = [
     component: Login,
   },
   {
+
     path: '/menu',
     name: 'About',
     component: Cardrestaurant
@@ -18,7 +25,6 @@ const routes = [
     name: 'AdminMenu',
     component: AdminMenu
   }
-]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

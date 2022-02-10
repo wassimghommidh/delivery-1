@@ -51,7 +51,9 @@
       <button id="bu" type="submit" @click="getMenuFood">Submit</button>
     </fieldset>
 
+
     <footer>&copy; Bavarian Bites 2022 powered by Adidas bmw</footer>
+
   </div>
 </template>
 
@@ -105,10 +107,14 @@ export default {
   background: #f4f7f8;
   border-radius: 8px;
   font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
 }
 .menu fieldset {
   border: none;
 }
+
 .menu legend {
   font-size: 1.4em;
   margin-bottom: 10px;
@@ -116,6 +122,7 @@ export default {
 .menu label {
   display: block;
   margin-bottom: 9px;
+
 }
 
 .menu fieldset {
@@ -144,6 +151,34 @@ export default {
   border-radius: 15px 15px 15px 0px;
 }
 
+=======
+}
+
+.menu fieldset {
+  border: none;
+}
+.menu input[type="text"],
+.menu input[type="number"],
+.menu input[type="text"]:focus,
+.menu input[type="number"]:focus,
+#name textarea,
+.menu textarea:focus,
+.menu select:focus {
+  background: #d2d9dd;
+}
+.menu .number {
+  background: #1abc9c;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 15px 0px;
+}
 /* .menu input[type="button"]
 .menu input[type="submit"] */
 #bu {

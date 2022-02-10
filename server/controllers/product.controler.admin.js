@@ -1,5 +1,6 @@
 var db = require("../database_mysql");
 const bcrypt = require("bcrypt");
+
 var esm = "chef delaa";
 var getALL = function (req, res) {
   db.query("SELECT * FROM restaurant ", (err, result) => {
@@ -10,6 +11,7 @@ var getALL = function (req, res) {
 var signUp = function (req, res) {
   db.query(
     `SELECT * From restaurant where name = "${req.body.name}" `,
+
     (err, result) => {
       if (err) {
         res.status(500).send(err);
@@ -24,7 +26,9 @@ var signUp = function (req, res) {
           const salt = bcrypt.genSaltSync();
           const hashedPaswword = bcrypt.hashSync(req.body.password, salt);
           db.query(
+
             `INSERT INTO restaurant (name,password,picture) Values ("${req.body.name}","${req.body.password},"${req.body.picture}"")`,
+
             (err, result) => {
               if (err) {
                 throw err;
@@ -58,6 +62,7 @@ var login = (req, res) => {
     }
   );
 };
+
 //////////////////////// this query for adding info for restaurant create /////
 addRestaurant = (req, res) => {
   var params = [req.body.name, req.body.picture, req.body.description];
@@ -92,3 +97,4 @@ module.exports = {
   addMenu,
   getMenuOneRestaurant,
 };
+
