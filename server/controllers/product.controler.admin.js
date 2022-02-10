@@ -45,5 +45,7 @@ var login =(req,res)=>{
     })
 }
 
+ 
+
 
 module.exports={getALL,signUp,login}
