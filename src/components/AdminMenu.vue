@@ -50,6 +50,8 @@
 
       <button id="bu" type="submit" @click="getMenuFood">Submit</button>
     </fieldset>
+
+    <footer>&copy; Bavarian Bites 2022 powered by Adidas bmw</footer>
   </div>
 </template>
 

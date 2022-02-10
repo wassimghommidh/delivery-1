@@ -14,18 +14,30 @@ CREATE TABLE user (
   profilePicture varchar(255),
 
   
-  PRIMARY KEY (ID)
+  PRIMARY KEY (id)
 );
+
 CREATE TABLE restaurant (
-  id int NOT NULL AUTO_INCREMENT,
+  restaurant_id int NOT NULL AUTO_INCREMENT,
   name varchar(50),     
   password varchar(64),
   picture  varchar(255),
   description varchar(255),
-    menu varchar(255),
-  
-  PRIMARY KEY (ID)
+  phoneNumber int,
+
+  PRIMARY KEY (restaurant_id)
 );
+CREATE TABLE menu (
+  id int NOT NULL AUTO_INCREMENT,
+  food_name varchar(50),
+  price int ,
+  restaurant_id int, 
+  PRIMARY KEY(id),
+  FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id)  
+);
+
+
+
 /* excute schema  */
 /* mysql -u root -p <server/database_mysql/schema.sql */
 
