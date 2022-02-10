@@ -6,12 +6,12 @@
           <div class="overlay-left">
             <h2>Welcome Back!</h2>
             <p>Please login with your personal info</p>
-            <button class="invert" id="signIn" @click="signUp = !signUp">Sign In</button>
+            <button class="invert" id="signIn" @click="signUp = !signUp">Log In</button>
         </div>
         <div class="overlay-right">
             <h2>Hello, Friend!</h2>
             <p>Please enter your personal details</p>
-            <button class="invert" id="signUp" @click="signUp = !signUp">Sign Up</button>
+            <button class="invert" id="signUp" @click="signUp = !signUp">Sign UP</button>
           </div>
         </div>
       </div>
@@ -21,15 +21,15 @@
         <input type="text" placeholder="Name" />
         <input type="password" placeholder="Password" />
           <input type="text" placeholder="Email" />
-        <button>Sign Up</button>
+        <router-link to="/menu"><button>Sign Up</button></router-link>
       </form>
       <form class="sign-in" action="#">
-        <h2>Sign In</h2>
+        <h2>Log In</h2>
         <div>Use your account</div>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <a href="#">Forgot your password?</a>
-        <button @click="linkToHome">Sign Up</button>
+        <router-link to="/menu"><button>Log in</button></router-link>
       </form>
     </div>
   </article>
@@ -38,16 +38,9 @@
 <script>
 
   export default {
-    component:{
-      Home : "Home"
-    },
     data: () => {
       return {
         signUp: false
-      }
-    },methods:{
-      linkToHome(){
-        this.$router.push('/home')
       }
     }
   }
@@ -62,7 +55,7 @@
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, .2),
                 0 10px 10px rgba(0, 0, 0, .2);
-    background: linear-gradient(to bottom, #efefef, #ccc);
+    background: linear-gradient(to bottom, #efefef, rgb(1, 17, 26));
     .overlay-container {
       position: absolute;
       top: 0;
@@ -78,7 +71,7 @@
       left: -100%;
       height: 100%;
       width: 200%;
-      background: linear-gradient(to bottom right, #57919b, #009345);
+      background: linear-gradient(to bottom right, #57919b, #1ac3e0);
       color: #fff;
       transform: translateX(0);
       transition: transform .5s ease-in-out;
