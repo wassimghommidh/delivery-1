@@ -43,7 +43,7 @@ export default {
 body {
   background-image: url("../public/img1.jpg");
   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>

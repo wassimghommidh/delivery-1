@@ -6,8 +6,12 @@
         <span class="number">M</span>
         <h2 id="add">Add your items resturant menu here :</h2>
       </legend>
-      <div v-for="(input, index) in foodTypes" :key="`foodInput-${index}`">
-        <label>Dish name </label>
+      <div
+        id="first"
+        v-for="(input, index) in foodTypes"
+        :key="`foodInput-${index}`"
+      >
+        <label id="bavaria">Dish name </label>
         <input
           id="name"
           type="text"
@@ -85,6 +89,9 @@ export default {
 
 <style>
 #dish {
+  margin-top: 15px;
+}
+#bavaria {
   margin-top: 8px;
 }
 .menu {
@@ -171,7 +178,7 @@ export default {
   opacity: 0.7;
   border-radius: 25px;
   overflow: hidden;
-  
+
   position: relative;
   transition: width 0.2s ease-in-out;
 }
@@ -180,13 +187,13 @@ export default {
 }
 .add-btn::before,
 .add-btn::after {
-   transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out; 
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   content: "";
-   position: absolute;
+  position: absolute;
   height: 4px;
   width: 10px;
   top: calc(50% - 2px);
-  background: red; 
+  background: red;
 }
 .add-btn::after {
   right: 14px;
@@ -314,10 +321,8 @@ export default {
   margin-bottom: 30px;
 }
 
-
-
-
- 
- 
-
+#first {
+  border-style: dashed;
+  width: 450px;
+}
 </style>
